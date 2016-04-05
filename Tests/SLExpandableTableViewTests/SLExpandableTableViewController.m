@@ -92,7 +92,7 @@
     if (self = [super initWithStyle:style]) {
         _firstSectionStrings = @[ @"Section 0 Row 0", @"Section 0 Row 1", @"Section 0 Row 2", @"Section 0 Row 3" ];
         _secondSectionStrings = @[ @"Section 1 Row 0", @"Section 1 Row 1", @"Section 1 Row 2", @"Section 1 Row 3", @"Section 1 Row 4" ];
-
+        
         _sectionsArray = @[ _firstSectionStrings, _secondSectionStrings ].mutableCopy;
         _expandableSections = [NSMutableIndexSet indexSet];
     }
@@ -104,7 +104,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-
+    
 }
 
 #pragma mark - View lifecycle
@@ -134,13 +134,13 @@
 {
     static NSString *CellIdentifier = @"SLExpandableTableViewControllerHeaderCell";
     SLExpandableTableViewControllerHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
+    
     if (!cell) {
         cell = [[SLExpandableTableViewControllerHeaderCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-
+    
     cell.textLabel.text = [NSString stringWithFormat:@"Section %ld", (long)section];
-
+    
     return cell;
 }
 
@@ -164,7 +164,7 @@
     if (indexPath.section > 0) {
         return 44.0 * 2.0;
     }
-
+    
     return UITableViewAutomaticDimension;
 }
 
@@ -184,15 +184,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
+    
     NSArray *dataArray = self.sectionsArray[indexPath.section];
     cell.textLabel.text = dataArray[indexPath.row - 1];
-
+    
     return cell;
 }
 

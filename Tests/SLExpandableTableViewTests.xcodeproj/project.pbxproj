@@ -19,6 +19,7 @@
 		A7A7E95E18B49F05000DB6D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A7E95C18B49F05000DB6D9 /* InfoPlist.strings */; };
 		A7A7E96018B49F05000DB6D9 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A7E95F18B49F05000DB6D9 /* Tests.m */; };
 		A7A7E96918B4A037000DB6D9 /* SLExpandableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A7E96818B4A037000DB6D9 /* SLExpandableTableViewController.m */; };
+		C1185CA01CB3368F0086E702 /* SLExpandableTableViewDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C1185C9F1CB3368F0086E702 /* SLExpandableTableViewDefaults.m */; };
 		CE972301613841BD8FA3C486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2751CC6176146ADA50BA1E1 /* libPods.a */; };
 		DFB2F166974540D8912B78B2 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B93C16CB3524EE2BD6EDFC0 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		A7A7E96818B4A037000DB6D9 /* SLExpandableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLExpandableTableViewController.m; sourceTree = "<group>"; };
 		B2751CC6176146ADA50BA1E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683BF6DD56641479C120152 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1185C9E1CB3368F0086E702 /* SLExpandableTableViewDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLExpandableTableViewDefaults.h; sourceTree = "<group>"; };
+		C1185C9F1CB3368F0086E702 /* SLExpandableTableViewDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLExpandableTableViewDefaults.m; sourceTree = "<group>"; };
 		C8B884721DAED5AB48717FD3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +142,8 @@
 				A79EB21518B49E690096FED6 /* SLAppDelegate.m */,
 				A79EB21718B49E690096FED6 /* Images.xcassets */,
 				A79EB20C18B49E690096FED6 /* Supporting Files */,
+				C1185C9E1CB3368F0086E702 /* SLExpandableTableViewDefaults.h */,
+				C1185C9F1CB3368F0086E702 /* SLExpandableTableViewDefaults.m */,
 			);
 			path = SLExpandableTableViewTests;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				A79EB1FF18B49E690096FED6 /* Frameworks */,
 				A79EB20018B49E690096FED6 /* Resources */,
 				174BEE5E47F745299AFE4B18 /* Copy Pods Resources */,
+				914CDFCD360B9297C214487F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +210,7 @@
 				A7A7E95118B49F05000DB6D9 /* Frameworks */,
 				A7A7E95218B49F05000DB6D9 /* Resources */,
 				B0B145C3B6704B5B987307CA /* Copy Pods Resources */,
+				40936E24B8E80962E8F72660 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +306,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		40936E24B8E80962E8F72660 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		914CDFCD360B9297C214487F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A798C6EB3AC94B2DB9BEE4C8 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +376,7 @@
 				A79EB21218B49E690096FED6 /* main.m in Sources */,
 				A7A7E96918B4A037000DB6D9 /* SLExpandableTableViewController.m in Sources */,
 				A79EB21618B49E690096FED6 /* SLAppDelegate.m in Sources */,
+				C1185CA01CB3368F0086E702 /* SLExpandableTableViewDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
