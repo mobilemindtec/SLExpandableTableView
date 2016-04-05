@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-@protocol UIExpandingTableViewCell <NSObject>
-
 @class SLExpandableTableView;
 
 typedef enum {
@@ -18,6 +15,8 @@ typedef enum {
     UIExpansionStyleExpanded
 } UIExpansionStyle;
 
+
+@protocol UIExpandingTableViewCell <NSObject>
 
 @property (nonatomic, assign, getter = isLoading) BOOL loading;
 

@@ -1,14 +1,13 @@
-Pod::Spec.new do |spec|
-  spec.name         = 'SLExpandableTableView'
-  spec.version      = '1.3.1'
-  spec.platform     = :ios, '6.0'
-  spec.license      = 'MIT'
-  spec.source       = { :git => 'https://github.com/OliverLetterer/SLExpandableTableView.git', :tag => spec.version.to_s }
-  spec.frameworks   = 'Foundation', 'UIKit'
-  spec.requires_arc = true
-  spec.homepage     = 'https://github.com/OliverLetterer/SLExpandableTableView'
-  spec.summary      = 'UITableView subclass with expandable sections.'
-  spec.author       = { 'Oliver Letterer' => 'oliver.letterer@gmail.com' }
-
-  spec.source_files = 'SLExpandableTableView'
+Pod::Spec.new do |s|
+  s.name         = "SLExpandableTableView"
+  s.version      = "0.0.1"
+  s.summary      = "Use Keyboard Bindings with the iOS Simulator."
+  s.description  = "Provides a great API to block based keyboard actions."
+  s.homepage     = "git@github.com:mobilemindtec/SLExpandableTableView.git"
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { "orta" => 'ricardo@mobilemind.com.br' }
+  s.source       = { :git => "git@github.com:mobilemindtec/SLExpandableTableView.git", :tag => s.version.to_s }
+  s.platform     = :ios, '8.0'
+  s.source_files = 'SLExpandableTableView.{h,m}'
+  s.requires_arc = true
 end
